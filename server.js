@@ -49,6 +49,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/products', (req, res) => {
+    res.render('products.hbs', {
+        pageTitle: 'Products Page',
+        welcomeMessage: 'Hello! Welcome to the products page!'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Unable to fetch',
